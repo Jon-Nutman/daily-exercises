@@ -3,7 +3,7 @@
 let arr = [1, 2, 3, 4, 5, 6];
 
  newArr = arr.map(function(item){
-  return ++item
+  return item + 1
 })
 // console.log(newArr)
 console.assert(JSON.stringify(newArr) == JSON.stringify([2, 3, 4, 5, 6, 7]));
@@ -33,15 +33,21 @@ let fruits = [
   { name: "grape", color: "purple" },
   { name: "watermelon", color: "green" },
 ];
-fruits.filter( 
-  fruits.name = 'orange', 'grape', 'watermelon'
-)
 
-// let filtered = fruits.filter(function(item){
-//   return item[0,]
-// //  return item.name === "orange", "grape", "watermelon"
-// })
-console.log(filtered)
+
+
+// let filterted = filter.name ('cherry')
+
+
+
+
+let filtered = fruits.filter(function(item){
+  if (!item.name.includes('cherry')){
+    return item;
+  }
+//  return item.name === "orange", "grape", "watermelon"
+})
+
 console.assert(
   JSON.stringify(filtered) ==
     JSON.stringify([
