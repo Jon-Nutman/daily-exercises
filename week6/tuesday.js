@@ -30,6 +30,15 @@ https://edabit.com/challenge/erFxBbqzZPSegMwnc
 // changeEnough([30, 40, 20, 5], 12.55) ➞ true
 // changeEnough([10, 0, 0, 50], 3.85) ➞ false
 // changeEnough([1, 0, 5, 219], 19.99) ➞ false
+
+function changeEnough(change, amountDue) {
+	if( ((change[0] *= 0.25) + (change[1] *= 0.10) + (change[2] *= 0.5) + (change[3] *= 0.01)) >= amountDue){
+      return true
+    }else{
+      return false
+    }
+  }
+
 console.assert(changeEnough([2, 100, 0, 0], 14.11) === false)
 console.assert(changeEnough([0, 0, 20, 5], 0.75) === true)
 // https://edabit.com/challenge/AtoWYYC9THAH5HbS2
@@ -68,6 +77,7 @@ https://edabit.com/challenge/4aaBNPnFMc3bzR7JR
 //     followers: 10
 //   }) ➞ [["likes", 2], ["dislikes", 3], ["followers", 10]]
 function objectToArray(obj) {
+        return Object.entries(obj)
 }
 const arr = objectToArray({A: '1', B: '2'})
 console.assert(arr[0][0] === 'A')
